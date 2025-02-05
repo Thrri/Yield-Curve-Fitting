@@ -124,9 +124,11 @@ $$
     Z^{\text{Vasicek}}(t, r_0, T) =
 $$
 
-$$
-    e^{\left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)-(T-t)\right) \left(\bar{r}^* - \frac{\sigma^2}{2(\gamma^*)^2}\right)-\frac{\sigma^2 \left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\right)^2}{4\gamma^*} - \frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\times r_0} 
-$$
+<div align="center">
+
+$$ e^{\left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)-(T-t)\right) \left(\bar{r}^* - \frac{\sigma^2}{2(\gamma^*)^2}\right)-\frac{\sigma^2 \left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\right)^2}{4\gamma^*} - \frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\times r_0} $$
+
+</div>
 
 If we then optimize the parameters $\gamma^*, \bar{r}^*,\sigma$ to minimize $J$, we obtain the set of parameters that best fit the Vasicek discount curve to the one observed in the data, as seen in the following code.
 
