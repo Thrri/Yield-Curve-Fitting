@@ -115,16 +115,17 @@ $$
 And then we set up a loss function $J$ of the parameters $\gamma^*, \bar{r}^*,\sigma$ which returns the sum of squared errors between the Vasicek model discount factors and the observed discount factors, that is
 
 $$    
-J(\gamma^*, \bar{r}^*, \sigma) = \sum_{i=1}^n (Z^{\text{Vasicek}}(r_0,0;T_i) - Z^{\text{Data}}(0, T_i))^2
+    J(\gamma^*, \bar{r}^*, \sigma) = \sum_{i=1}^n (Z^{\text{Vasicek}}(r_0,0;T_i) - Z^{\text{Data}}(0, T_i))^2
 $$
 
 Where, once again, $Z^{\text{Vasicek}}$ is given by
 
 $$
-Z^{\text{Vasicek}}(t, r_0, T) =
+    Z^{\text{Vasicek}}(t, r_0, T) =
 $$
+
 $$
-e^{\left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)-(T-t)\right) \left(\bar{r}^* - \frac{\sigma^2}{2(\gamma^*)^2}\right)-\frac{\sigma^2 \left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\right)^2}{4\gamma^*} - \frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\times r_0} 
+    e^{\left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)-(T-t)\right) \left(\bar{r}^* - \frac{\sigma^2}{2(\gamma^*)^2}\right)-\frac{\sigma^2 \left(\frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\right)^2}{4\gamma^*} - \frac{1}{\gamma^*} \left(1 - e^{-\gamma^*(T-t)} \right)\times r_0} 
 $$
 
 If we then optimize the parameters $\gamma^*, \bar{r}^*,\sigma$ to minimize $J$, we obtain the set of parameters that best fit the Vasicek discount curve to the one observed in the data, as seen in the following code.
